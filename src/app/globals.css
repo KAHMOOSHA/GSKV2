@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-1: #f86f2d;
+  --color-2: #fa8f3d;
+  --color-3: #faaa3a;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--white);
+  line-height: 1.8;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+span {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+@keyframes in-from-middle {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(10vh);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes in-from-left {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotateZ(-5deg) translateY(10vh);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotateZ(0) translateY(0);
+  }
+}
+
+@keyframes in-from-right {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotateZ(5deg) translateY(10vh);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotateZ(0) translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .animate-in-from-left {
+      animation: in-from-left both;
+      animation-timeline: view();
+      animation-range: entry 10% contain 40%;
+      transform-origin: 50% 100%;
+    }
+
+    .animate-in-from-middle {
+      animation: in-from-middle both;
+      animation-timeline: view();
+      animation-range: entry 10% contain 40%;
+      transform-origin: 50% 100%;
+    }
+
+    .animate-in-from-right {
+      animation: in-from-right both;
+      animation-timeline: view();
+      animation-range: entry 10% contain 40%;
+      transform-origin: 50% 100%;
+    }
+
+    @media (max-width: 640px) {
+      .animate-in-from-left,
+      .animate-in-from-middle,
+      .animate-in-from-right {
+        animation-range: entry 5% contain 30%;
+      }
+    }
+  }
+}
