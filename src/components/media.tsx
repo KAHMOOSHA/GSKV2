@@ -41,12 +41,12 @@ export default function Media() {
   // { data }: { data: AboutSection }
   return (
     <section className="px-4 mx-auto max-w-7xl py-10 lg:py-14">
-      <UnderlinedHeading text="Our Departments" align="center"></UnderlinedHeading>
+      {/* <UnderlinedHeading text="Our Departments" align="center"></UnderlinedHeading>
       <div className="flex flex-col md:flex-row gap-6 p-16">
         {MEDIA_DATA.map((media) => (
           <DepartmentBox key={media.label} media={media} />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }

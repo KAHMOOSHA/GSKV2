@@ -7,8 +7,9 @@ import UnderlinedHeading from './underlinedHeading';
 
 const slugImageMap: Record<string, { src: string; alt: string }> = {
   about: { src: '/hero/IMG-20250705-WA0032.webp', alt: 'About Us Hero' },
-  contact: { src: '/hero/IMG-20250705-WA0032.webp', alt: 'Contact Us Hero' },
+  contact: { src: '/hero/IMG-20250612-WA0421.webp', alt: 'Contact Us Hero' },
   media: { src: '/hero/IMG-20250611-WA0333.webp', alt: 'Our Work Hero' },
+  donation: { src: '/hero/contact.webp', alt: 'Our Work Hero' },
   // Add more mappings as needed
 };
 

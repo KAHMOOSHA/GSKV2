@@ -10,24 +10,21 @@ const CARDS = [
   {
     id: 1,
     title: 'Served Meals',
-    image: '/help/2.jpg',
+    image: '/IMG-20250617-WA0053.webp',
     alt: 'Served meals',
-    number: '500000',
-    description: 'Serving fresh hot meals everyday',
+    number: '600000',
   },
   {
     id: 2,
     title: 'Donation',
-    image: '/help/1.jpg',
+    image: '/IMG-20250622-WA0341.webp',
     alt: 'Donation',
-    description: 'Your donation provides essential meals to children in need.',
   },
   {
     id: 3,
     title: 'Be a volunteer',
     image: '/help/3.jpg',
     alt: 'Be a volunteer',
-    description: 'Even the all-powerful Pointing has no control about the blind texts.',
   },
 ];
 
@@ -66,7 +63,6 @@ export default function GetInvolved() {
                         targetValue={+card.number}
                         className="text-white text-2xl sm:text-3xl font-semibold mb-1"
                       />
-                      <span>{card.description}</span>
                     </>
                   ) : (
                     card.description

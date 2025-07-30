@@ -29,13 +29,13 @@ export function ColumnLayout({
             imagePosition === 'left' ? 'lg:flex-row-reverse' : ''
           } gap-10`}
         >
-          <div className="w-full lg:w-1/2 h-100 ">
+          <div className="w-full lg:w-1/2 max-w-[500px]">
             <Image
               src={imageSrc}
               alt={imageAlt}
               width={640}
               height={700}
-              className="w-full object-cover rounded-xl shadow-md"
+              className="w-full object-contain rounded-xl shadow-md"
             />
           </div>
 
