@@ -91,7 +91,7 @@ export default function NavbarComponent() {
       <div
         id="sticky-header"
         className={cn('transition-all duration-500 ease-in-out py-4 px-9 ', {
-          'bg-[#127544] shadow-md': hasScrolled || mobileMenuOpen,
+          'bg-[#3CC78F] shadow-md': hasScrolled || mobileMenuOpen,
           'bg-transparent': !hasScrolled && !mobileMenuOpen,
         })}
       >
