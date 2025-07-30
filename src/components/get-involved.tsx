@@ -4,7 +4,6 @@ import Counter from './number-counter';
 import { DONATION_URL } from '@/constant';
 import { Button } from './button';
 import { motion } from 'framer-motion';
-import UnderlinedHeading from './underlinedHeading';
 
 const CARDS = [
   {
@@ -30,7 +29,7 @@ const CARDS = [
 
 export default function GetInvolved() {
   return (
-    <section className="px-4 mx-auto max-w-7xl py-10 lg:py-12  rounded-xl ">
+    <section className="px-4 mx-auto max-w-7xl py-10 lg:py-12 rounded-xl">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {CARDS.map((card, index) => (
           <motion.div
@@ -51,23 +50,19 @@ export default function GetInvolved() {
                 >
                   {card.title}
                 </motion.h3>
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
-                  className="text-white text-sm sm:text-base"
-                >
-                  {card.number ? (
-                    <>
-                      <Counter
-                        targetValue={+card.number}
-                        className="text-white text-2xl sm:text-3xl font-semibold mb-1"
-                      />
-                    </>
-                  ) : (
-                    card.description
-                  )}
-                </motion.p>
+
+                {card.number && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                  >
+                    <Counter
+                      targetValue={+card.number}
+                      className="text-white text-2xl sm:text-3xl font-semibold mb-1"
+                    />
+                  </motion.p>
+                )}
               </div>
             </div>
           </motion.div>

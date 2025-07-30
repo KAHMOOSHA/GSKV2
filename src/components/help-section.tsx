@@ -51,7 +51,7 @@ export default function HelpSection() {
     <section className="px-4 mx-auto max-w-7xl py-10 lg:py-24">
       <UnderlinedHeading text="Our Helps And Services" align="center" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:p-12">
         {CARDS.map((card) => (
           <motion.div
             key={card.id}
